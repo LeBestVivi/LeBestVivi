@@ -1,14 +1,13 @@
 const Discord = require("discord.js")
 const fs = require('fs')
 const client = new Discord.Client()
-const token = process.env.token;
 
  
 let prefix = "!"
  
 const warns = JSON.parse(fs.readFileSync('./warns.json'))
  
-client.login(token)
+client.login(require("./token.json"))
 
 client.on('ready', function () {
     console.log('Bot ON');
